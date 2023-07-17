@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="C:\Users\abhijith.manoj\Downloads\claysys-logo.png" alt="Claysys Technologies" height="30">
+        </div>
+        <div class="navbar-menu">
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\index.html">Home</a>
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\login.html">Sign in</a>
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\signup.html">Sign up</a>
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\about.html">About us</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Contact Us</h2>
+
+        <div class="contact-info">
+            <p>
+                <strong>
+                    <img src="C:\Users\abhijith.manoj\Downloads\clay.png" alt="Claysys Technologies Image" style="width: 5%; float: left;">
+                    Claysys Technologies
+                </strong>
+            </p>
+            <p>
+                <strong>Address:</strong> ClaySys Technologies Pvt Ltd
+                InfoPark Phase 2
+                Kochi, Kerala
+                India, 682303
+            </p>
+            <p><strong>Phone:</strong> 0484-2975311</p>
+            <p><strong>Email:</strong> info@claysys.com</p>
+        </div>
+
+        <form method="post">
+            <div class="input-group">
+                <label for="firstName">Your Name</label>
+                <input type="text" id="firstName" name="firstName" required onfocusout="validateFirstName()">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required onfocusout="validateEmail()">
+            </div>
+
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="input-group" style="width: 50%; margin-left: 100px;">
+                <input type="submit" value="Send Message">
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        &copy; 2023 Claysys Technologies. All rights reserved.
+    </div>
+</body>
+</html>

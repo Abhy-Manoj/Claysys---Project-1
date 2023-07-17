@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="C:\Users\abhijith.manoj\Downloads\claysys-logo.png" alt="Claysys Technologies" height="30">
+        </div>
+        <div class="navbar-menu">
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\index.html">Home</a>
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\login.html">Sign in</a>
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\about.html">About us</a>
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\contact.html">Contact us</a>
+        </div>
+    </div>
+    <div class="containers">
+        <h2>Sign up</h2>
+
+        <form method="post" id="signupForm" onsubmit="return validateForm()">
+            <div class="input-group">
+                <div class="half-width">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required onfocusout="validateFirstName()">
+                </div>
+                <div class="half-width">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required onfocusout="validateLastName()">
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+
+            <div class="input-group">
+                <div class="half-width">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required onchange="calculateAge();">
+                </div>
+                <div class="half-width">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required onfocusout="validateAge()">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="half-width">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" required onfocusout="validatePhoneNumber()">
+                </div>
+                <div class="half-width">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required onfocusout="validateEmail()">
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+
+            <div class="input-group">
+                <div class="half-width">
+                    <label for="state">State</label>
+                    <select id="state" name="state" required onchange="populateCities()">
+                        <option value="" selected disabled>Select</option>
+                        <option value="state1">Kerala</option>
+                        <option value="state2">Tamil Nadu</option>
+                        <option value="state3">Karnataka</option>
+                    </select>
+                </div>
+                <div class="half-width">
+                    <label for="city">City</label>
+                    <select id="city" name="city" required>
+                        <option value="" selected disabled>Select</option>
+                    </select>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required onfocusout="validatePassword()">
+            </div>
+
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required onfocusout="validateConfirmPassword()">
+            </div>
+
+            <div class="input-group" style="width: 50%; margin-left: auto; margin-right: auto;">
+                <input type="submit" value="Sign up" onclick="showAlert()">
+            </div>
+        </form>
+        <div class="signup-link">
+            <p>Already have an account? <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\login.html">Sign in</a></p>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2023 Claysys Technologies. All rights reserved.
+    </div>
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+
+            if (firstName === "" || lastName === "") {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            alert("Sign up successful!");
+            return false;
+        
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Claysys Technologies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="C:\Users\abhijith.manoj\Downloads\claysys-logo.png" alt="Claysys Technologies" height="30">
+        </div>
+        <div class="navbar-menu">
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\login.html">Sign in</a>
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\signup.html">Sign up</a>
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\about.html">About us</a>
+            <a href="C:\Users\abhijith.manoj\source\repos\Phase1Project\contact.html">Contact us</a>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: 150px">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="C:\Users\abhijith.manoj\Downloads\bg.jpg" alt="Slideshow Image 1">
+            </div>
+            <div class="mySlides">
+                <img src="C:\Users\abhijith.manoj\Downloads\min.jpg" alt="Slideshow Image 2">
+            </div>
+            <div class="mySlides">
+                <img src="C:\Users\abhijith.manoj\Downloads\bgg.jpg" alt="Slideshow Image 3">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <h1>Welcome!</h1>
+    </div>
+    <div class="footer">
+        &copy; 2023 Claysys Technologies. All rights reserved.
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        setInterval(function () {
+            plusSlides(1);
+        }, 3000);
+
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+</html>
